@@ -12,7 +12,7 @@ struct soloSetGameApp: App {
     var body: some Scene {
         WindowGroup {
             let game = SetGameViewController()
-            ContentView(gameViewController: game)
+            ContentView(gameController: game)
         }
     }
 }

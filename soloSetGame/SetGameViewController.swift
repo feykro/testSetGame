@@ -17,7 +17,7 @@ class SetGameViewController: ObservableObject {
     @Published private var model = createSetGame()
 
     var cards: [Card] {
-        return model.cards
+        return model.hand
     }
 
     var score: Int {
@@ -30,8 +30,8 @@ class SetGameViewController: ObservableObject {
         model.choseCard(card: card)
     }
 
-    func clear() {
-        model.popingMatch()
+    func draw() {
+        model.draw(3)
     }
 
     func startOver() {
