@@ -30,7 +30,7 @@ class SetGameViewController: ObservableObject {
         model.choseCard(card: card)
     }
 
-    func draw() {
+    func drawThree() {
         model.draw(3)
     }
 

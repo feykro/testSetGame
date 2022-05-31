@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CardView: View {
+    static let widthRatio: CGFloat = 0.75
+
     typealias Card = SetGame.Card
     private let card: Card
 
@@ -67,8 +69,4 @@ struct CardView: View {
             }
         })
     }
-
-    //  MARK: constants
-
-    static let widthRatio: CGFloat = 0.75
 }

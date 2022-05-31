@@ -18,19 +18,19 @@ struct SetGame {
     init() {
         gameCards = []
         let possibleColors: [Color] = [.red, .blue, .green]
-        var i = 0
+        var cardId = 0
         for colorType in ColorType.allCases {
-            for j in 0 ..< 3 {
+            for cardValue in 1 ... 3 {
                 for faceType in FaceType.allCases {
                     for color in possibleColors {
                         gameCards.append(Card(
-                            id: i,
+                            id: cardId,
                             type: faceType,
                             color: color,
                             colorType: colorType,
-                            faceValue: j + 1
+                            faceValue: cardValue
                         ))
-                        i += 1
+                        cardId += 1
                     }
                 }
             }
@@ -46,8 +46,8 @@ struct SetGame {
         draw(15)
     }
 
-    mutating func draw(_ nb: Int) {
-        for _ in 0 ..< nb {
+    mutating func draw(_ numberOfCardsToDraw: Int) {
+        for _ in 0 ..< numberOfCardsToDraw {
             // we take away a card from the deck to draw in the "hand"
             hand.append(deck.remove(at: deck.indices.randomElement()!))
         }

@@ -29,7 +29,7 @@ struct ContentView: View {
             }.padding(.top, 1)
             HStack {
                 Button("Draw 3") {
-                    gameController.draw()
+                    gameController.drawThree()
                 }
                 Spacer()
                 Button("Start again !") {
