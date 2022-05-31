@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var gameController: SetGameViewController
+    @ObservedObject var gameController: SetGameViewModel
     typealias Card = SetGame.Card
     let columns: [GridItem] = [.init(.flexible(minimum: 65)),
                                .init(.flexible(minimum: 65)),
@@ -56,7 +56,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let game = SetGameViewController()
+        let game = SetGameViewModel()
         ContentView(gameController: game)
             .previewInterfaceOrientation(.portrait)
     }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class SetGameViewController: ObservableObject {
+class SetGameViewModel: ObservableObject {
     typealias Card = SetGame.Card
 
     private static func createSetGame() -> SetGame {
